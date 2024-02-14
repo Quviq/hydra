@@ -48,3 +48,10 @@ test-show-details: direct
 -- Fix compilation of strict-containers (see also nix/hydra/project.nix)
 package strict-containers
   ghc-options: "-Wno-noncanonical-monad-instances"
+
+source-repository-package
+    type: git
+    location: https://github.com/input-output-hk/quickcheck-contractmodel
+    tag: 6e3a3406d09551d7c1263e2d2260126a73eec4a9
+    subdir:
+      quickcheck-threatmodel
