@@ -315,6 +315,7 @@ test-suite tests
     Hydra.OptionsSpec
     Hydra.PartySpec
     Hydra.PersistenceSpec
+    Hydra.ThreatModel
     Hydra.UtilsSpec
     Paths_hydra_node
     Spec
@@ -364,6 +365,7 @@ test-suite tests
     , QuickCheck
     , quickcheck-dynamic                                                >=3.3.1   && <3.4
     , quickcheck-instances
+    , quickcheck-threatmodel
     , random
     , regex-tdfa
     , req
