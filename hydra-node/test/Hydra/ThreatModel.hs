@@ -21,7 +21,7 @@ makeThreatModelEnv (tx, utxo) = ThreatModelEnv
 
 someThreatModel :: ThreatModel ()
 someThreatModel = do
-  inp <- pickAny =<< getTxReferenceInputs
+  inp <- anyReferenceInput
   shouldValidate $ removeInput inp    -- Fails!
   pure ()
 
