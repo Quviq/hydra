@@ -22,8 +22,8 @@ makeThreatModelEnv (tx, utxo) = ThreatModelEnv
 someThreatModel :: ThreatModel ()
 someThreatModel = do
   inp <- anyReferenceInput
-  -- shouldValidate $ removeInput inp    -- Fails!
-  shouldValidate $ changeRefScriptOf inp ReferenceScriptNone    -- Fails!
+  shouldValidate $ removeInput inp    -- Fails!
+  -- shouldValidate $ changeRefScriptOf inp ReferenceScriptNone    -- Fails!
   pure ()
 
 prop_something :: Property
