@@ -52,7 +52,7 @@ package strict-containers
 source-repository-package
     type: git
     location: https://github.com/input-output-hk/quickcheck-contractmodel
-    tag: ba65b004caa385ded748dbd4ce47a307adea864c
+    tag: 8f2b8d702d7c1c804a273a9267f0f62ace1ad8ce
     subdir:
       quickcheck-threatmodel
     --sha256: 4I+6pH9qwVXfy23Ed/NMf3J9Sw1yjCzmdC3tJQ3CMqQ=
