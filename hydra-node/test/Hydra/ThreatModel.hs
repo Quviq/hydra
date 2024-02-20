@@ -21,10 +21,10 @@ makeThreatModelEnv (tx, utxo) = ThreatModelEnv
 
 someThreatModel :: ThreatModel ()
 someThreatModel = do
-  inp <- anyReferenceInput
-  shouldValidate $ removeInput inp    -- Fails!
-  -- shouldValidate $ changeRefScriptOf inp ReferenceScriptNone    -- Fails!
-  pure ()
+  inp  <- anyReferenceInput
+  inp' <- anyReferenceInput
+  shouldValidate $ changeRefScriptOf inp  (refScriptOf inp') <>
+                   changeRefScriptOf inp' (refScriptOf inp)
 
 prop_something :: Property
 prop_something = runThreatModel someThreatModel [makeThreatModelEnv healthyAbortTx]
